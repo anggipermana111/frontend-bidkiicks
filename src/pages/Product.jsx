@@ -232,7 +232,13 @@ function Product() {
                         }} />
                         <button className='bg-black text-white rounded-xl font-semibold hover:bg-slate-800' onClick={() => {
                             if (bid <= product?.highestBid) {
-                                alert(`You must place bid higher than $${product?.highestBid} USD`);
+                                if(product?.highestBid>=product?.startingPrice) {
+                                    alert(`You must place bid higher than $${product?.highestBid} USD`);
+                                } else {
+                                    alert(`You must place bid higher than $${product?.startingPrice} USD`);
+                                }
+                            } else if (bid <= product?.startingPrice) {
+                                alert(`You must place bid higher than $${product?.startingPrice} USD`);
                             } else {
                                 setIsHidePlaceBid(true);
                                 const token = localStorage.getItem('token');
