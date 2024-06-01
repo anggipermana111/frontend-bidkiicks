@@ -5,7 +5,7 @@ import download from '../assets/download.png'
 
 function Footer() {
     return (
-        <footer className="flex justify-between items-center px-7 py-12 bg-gray-900 text-white text-xl font-semibold">
+        <footer className="flex justify-between items-center px-7 py-12 bg-gray-950 text-white text-xl font-semibold">
             <div className="flex justify-center items-center gap-9">
                 <div className="flex flex-col gap-3">
                     <span>Kickstart Your Bids, Score Big.</span>
